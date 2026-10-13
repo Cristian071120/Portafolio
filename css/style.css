@@ -1,0 +1,83 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        135deg,
+        #111827,
+        #2563eb
+    );
+
+    color: white;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.4rem;
+}
+
+section {
+    min-height: 400px;
+}
+
+footer a {
+    text-decoration: none;
+}
+/* Fotografía circular del perfil */
+.foto-perfil {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 50%;
+    border: 5px solid #38bdf8;
+
+    box-shadow:
+        0 0 20px rgba(56, 189, 248, 0.35),
+        0 0 45px rgba(37, 99, 235, 0.20);
+
+    transition: transform 0.3s ease;
+}
+
+.foto-perfil:hover {
+    transform: scale(1.04);
+}
+
+/* Texto pequeño sobre el título */
+.texto-bienvenida {
+    color: #38bdf8 !important;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.9rem !important;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* Adaptación a celulares */
+@media (max-width: 767px) {
+    .foto-perfil {
+        width: 220px;
+        height: 220px;
+    }
+
+    .hero h1 {
+        font-size: 2.7rem;
+    }
+}
